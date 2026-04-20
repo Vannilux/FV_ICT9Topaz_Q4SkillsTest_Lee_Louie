@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Seatwork 1</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <style>
+        body {
+            background-color: #f0f2f5; 
+            font-family: sans-serif;
+            background-image: url(https://media1.tenor.com/m/VXK2tjK7Uh0AAAAC/pixel-art.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .register-container {
+            background-color: white;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn-black {
+            background-color: #000;
+            color: white;
+            width: 100%;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .btn-black:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .pfp {
+            margin-left: 150px;
+        }
+
+          .navbar {
+            background: linear-gradient(to right, #443d04, #dadad4);
+        }
+
+        .navbar .nav-link,
+        .navbar .navbar-brand {
+            color: white !important;
+        }
+
+         #train {
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+         }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Tenshi
+            <img src="https://thumbs.dreamstime.com/b/fast-train-llogo-design-high-speed-rail-icon-vector-illustration-fast-train-llogo-design-high-speed-rail-silhouette-icon-vector-291958535.jpg" alt="train" id="train">
+        </a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Schedule</a>
+            <a class="nav-link active" href="#">Register</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="register-container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Login</h2>
+            <p class="text-muted">Continue to A.E.S.A Foundation?</p>
+        </div>
+        <div class="pfp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Profile" class="img-fluid rounded-circle" width="120">
+            </div>
+
+            <br><br><br>
+    
+<form id="regForm">
+  <div class="mb-4">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="Will" required>
+  </div>
+
+  <div class="mb-4">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="********" required>
+  </div>
+
+  <div class="mb-4 form-check">
+    <input type="checkbox" class="form-check-input" id="terms" required onchange="checkAgreement()">
+    <label class="form-check-label" for="terms">
+      I agree to the Terms and Conditions and Privacy Policy
+    </label>
+  </div>
+
+  <p id="termsMessage" class="mt-2"></p>
+
+  <button type="submit" class="btn btn-black">Login</button>
+</form>
+
+<script>
+
+document.getElementById("regForm").onsubmit = function(event) {
+    event.preventDefault();
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "vanilux" && password === "ice_cream") {
+        alert("Welcome to the A.E.S.A Foundation, " + username + "!");
+        
+    } else {
+        alert("Access denied. Incorrect Username or Password.");
+    }
+};
+
+function checkAgreement() {
+    let agreed = document.getElementById("terms").checked;
+
+    switch (agreed) {
+        case true:
+            document.getElementById("termsMessage").innerHTML = "✔ You accepted the terms.";
+            break;
+        case false:
+            document.getElementById("termsMessage").innerHTML = "You will be erased from existence due to your uncooperation with the terms.";
+            break;
+    }
+}
+</script>
+
+
+    </div>
+</body>
+</html>
+
+<!-- used copilot in improving and understanding the code https://copilot.microsoft.com/shares/ENVzTScbKeBbmBnnHoH9S -->
